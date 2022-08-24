@@ -20,7 +20,9 @@ def ProcessBlocks(startHeight, blocks):
     '''
     For each block in the list, add the block to blocks_at_height if the cryptographic hash is valid (in assumptions).
     Increment the count for the block
-
+    If the count for the block at a given height is less than 3, don't add the height to current height (total)
+    else add the height to current height (total)
+    Return the current height (total)
     '''
     for i, block in enumerate(blocks):
         if len(blocks_at_height) < startHeight + i:
@@ -39,8 +41,10 @@ def ProcessBlocks(startHeight, blocks):
     current_height = total
     return current_height
 
+# Time Complexity: O(n)
 
-# Verify whether block is one character greater than the last item at blocks_at_height
+# Function to verify whether block is one character greater than the last item at blocks_at_height
+# Its an example for a function that can be used to verify the cryptographic hash of a block (not being used here)
 
 
 def verifyHash(block):
