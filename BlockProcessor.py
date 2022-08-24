@@ -6,7 +6,7 @@ Assumptions and Thoughts:
 1. Blocks are fed in sequence and need to be verified.
 a) They need to be verfied sequentially. This means that cryptographically the has of the current block needs to be connect to the previous block.
 b) The previous block needs to be verified and cannot be the same as the current block.
-
+2) ProcessBlocks() doesn't handle forking.
 '''
 
 # maintains a count for each block occurence
