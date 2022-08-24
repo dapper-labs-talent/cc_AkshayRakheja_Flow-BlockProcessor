@@ -1,12 +1,5 @@
 
 
-from curses import has_key
-
-
-# Process Blocks returns accepted Height given startHeight and blocks as a list
-
-#  Q1) Are the blocks that are not accepted, remembered? eg:  block_3 followed by block 1. Should ProcessBlocks return 4 next?
-#  Q2)
 '''
 Assumptions and Thoughts:
 
@@ -16,7 +9,9 @@ b) The previous block needs to be verified and cannot be the same as the current
 
 '''
 
+# maintains a count for each block occurence
 blocks_counts = {}
+# array to maintain the blocks at a given height
 blocks_at_height = []
 current_height = 0
 
